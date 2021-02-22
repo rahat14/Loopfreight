@@ -4,76 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/blue"
+    android:orientation="vertical"
     tools:context=".ui.MainActivity">
+
     <ProgressBar
-        android:visibility="invisible"
-        android:layout_width="match_parent"
         android:id="@+id/pbar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:indeterminate="true"
         android:indeterminateTint="@color/white"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_height="wrap_content"/>
-
-   <com.google.android.material.card.MaterialCardView
-       android:layout_width="match_parent"
-       android:layout_marginStart="25dp"
-       android:layout_marginEnd="25dp"
-       android:layout_marginTop="15dp"
-       android:layout_marginBottom="15dp"
-       app:cardCornerRadius="6dp"
-       android:layout_height="wrap_content">
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:orientation="horizontal"
-           android:weightSum="4"
-           android:padding="10dp"
-           android:layout_height="wrap_content">
-           <SearchView
-
-               android:id="@+id/serachView"
-               app:iconifiedByDefault="false"
-               android:iconifiedByDefault="false"
-               android:queryHint="Search For A Repository..."
-               android:searchIcon="@null"
-               android:closeIcon="@null"
-               android:queryBackground="@android:color/transparent"
-               android:layout_width="0dp"
-               android:layout_weight="3.4"
-               android:layout_height="wrap_content"/>
-           <ImageView
-               android:id="@+id/search_button"
-               android:src="@drawable/ic_baseline_search_24"
-               android:layout_width="0dp"
-               android:layout_weight="0.6"
-               android:layout_gravity="center"
-               android:layout_height="40dp"/>
-
-
-       </LinearLayout>
-   </com.google.android.material.card.MaterialCardView>
+        android:visibility="invisible" />
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_marginEnd="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="15dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="4">
+
+            <SearchView
+                android:id="@+id/serachView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.4"
+                android:closeIcon="@null"
+                android:iconifiedByDefault="false"
+                android:queryBackground="@android:color/transparent"
+                android:queryHint="Search For A Repository..."
+                android:searchIcon="@null"
+                app:iconifiedByDefault="false" />
+
+            <ImageView
+                android:id="@+id/search_button"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.6"
+                android:src="@drawable/ic_baseline_search_24" />
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginStart="10dp"
-        app:cardElevation="12dp"
+        android:layout_marginEnd="10dp"
         app:cardCornerRadius="12dp"
-        android:layout_height="match_parent">
+        app:cardElevation="12dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/list"
-                android:nestedScrollingEnabled="false"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingBottom="40dp"
-                android:clipToPadding="false"/>
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:paddingBottom="40dp" />
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
