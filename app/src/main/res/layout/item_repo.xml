@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="8dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/black"
+    android:layout_margin="16dp"
+    tools:viewBindingIgnore="false"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:text="Repo Name"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/auther"
+            android:layout_width="match_parent"
+            android:text="Auther Naem"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/short_desc"
+            android:layout_width="match_parent"
+            android:text="Shore Desc...."
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:minLines="2"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/lang"
+            android:layout_width="wrap_content"
+            android:text="Langugage"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <TextView
+               android:layout_width="wrap_content"
+               android:textColor="@color/black"
+               android:textStyle="bold"
+               android:textSize="15sp"
+               android:text="Most Active Contibutor : "
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:id="@+id/contibutorName"
+               android:layout_width="wrap_content"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+               android:text="Most Active Contibutor : "
+               android:layout_height="wrap_content"/>
+
+
+       </LinearLayout>
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/addCount"
+                android:layout_width="wrap_content"
+                android:text="128"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_toEndOf="@+id/addCount"
+                android:layout_width="wrap_content"
+                android:text=" additions"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:layout_below="@id/addCount"
+                android:id="@+id/deleteCount"
+                android:layout_width="wrap_content"
+                android:text="333"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_below="@+id/addCount"
+                android:layout_toEndOf="@+id/deleteCount"
+                android:layout_width="wrap_content"
+                android:text=" deletions"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:layout_below="@id/deleteCount"
+                android:id="@+id/commitsCount"
+                android:layout_width="wrap_content"
+                android:text="333"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_below="@+id/deleteCount"
+                android:layout_toEndOf="@+id/commitsCount"
+                android:layout_width="wrap_content"
+                android:text=" commits"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/dateTv"
+                android:layout_below="@+id/deleteCount"
+                android:layout_width="wrap_content"
+                android:text=" commits"
+                android:layout_alignParentEnd="true"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
